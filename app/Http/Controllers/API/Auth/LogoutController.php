@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class LogoutController extends Controller
 {
-    public function logout(Request $request)
+    public function store(Request $request)
     {
         // Pastikan user sudah login
         if ($request->user()) {
