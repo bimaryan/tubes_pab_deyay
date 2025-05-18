@@ -9,8 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::where('role', 'Dosen', 'Mahasiswa')->get();
-
+        $users = User::whereIn('role', ['Dosen', 'Mahasiswa'])->get();
         return response()->json($users);
     }
 }
