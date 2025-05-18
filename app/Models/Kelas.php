@@ -11,13 +11,13 @@ class Kelas extends Model
 
     protected $guarded =[];
 
-    public function user()
-    {
-        $this->belongsTo(User::class, 'users_id');
-    }
-
     public function matkul()
     {
-        $this->belongsTo(Matkul::class);
+        return $this->belongsTo(Matkul::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'users_id');
     }
 }
